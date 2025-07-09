@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaky's Cine/Registro</title>
+    <link rel="stylesheet" href="Registro.css">
+    <link rel="stylesheet" href="/fuentes.css">
+</head>
+<body>
+    <header>
+        <div class="hamburger-container">
+            <div class="hamburger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!-- Menú desplegable -->
+            <nav class="mobile-menu">
+                <ul class="mobile-menu_list">
+                    <li class="mobile-menu_item">
+                        <a href="/Pagina Principal/PgPrincipal.html" class="mobile-menu_link">
+                            <img src="/Iconos/Inicio.svg" alt="Inicio" class="menu-icon">
+                            <span>Inicio</span>
+                        </a>
+                    </li>
+                    <li class="mobile-menu_item">
+                        <a href="/Pagina Cartelera/PgCartelera.html" class="mobile-menu_link">
+                            <img src="/Iconos/Cartelera.svg" alt="Cartelera" class="menu-icon">
+                            <span>Cartelera</span>
+                        </a>
+                    </li>
+                    <li class="mobile-menu_item">
+                        <a href="/Pagina Estrenos/PgEstrenos.html" class="mobile-menu_link">
+                            <img src="/Iconos/Estrenos.svg" alt="Próximos Estrenos" class="menu-icon">
+                            <span>Próximos estrenos</span>
+                        </a>
+                    </li>
+                    <li class="mobile-menu_item">
+                        <a href="/Carameleria/Carameleria.html" class="mobile-menu_link">
+                            <img src="/Iconos/Carameleria.svg" alt="Carameleria" class="menu-icon">
+                            <span>Carameleria</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <img src="/logo.png" alt="logo" class="logo">
+        <div class="button-container">
+            <a href="#" class="login-button" id="header-login-btn">Iniciar Sesión</a>
+            <a href="Registro.html" class="register-button">Registrarse</a>
+        </div>
+    </header>
+    <main class="registro-container">
+        <div class="registro-form">
+            <div class="form-header">
+                <h1>CREAR CUENTA</h1>
+                <p>Únete a Vaky's Cine para disfrutar de beneficios exclusivos</p>
+            </div>
+            
+            <form class="form-body" id="registerForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo</label>
+                        <input type="text" id="nombre" placeholder="Ej: Juan Pérez">
+                        <img src="/Iconos/user.svg" alt="Nombre" class="input-icon">
+                        <div class="error-message" id="nombre-error"></div>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" placeholder="Ej: tu@email.com">
+                        <img src="/Iconos/email.svg" alt="Email" class="input-icon">
+                        <div class="error-message" id="email-error"></div>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="password">Contraseña</label>
+                        <input type="password" id="password" placeholder="Mínimo 8 caracteres">
+                        <img src="/Iconos/password.svg" alt="Contraseña" class="input-icon">
+                        <div class="error-message" id="password-error"></div>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="confirm-password">Confirmar Contraseña</label>
+                        <input type="password" id="confirm-password" placeholder="Repite tu contraseña">
+                        <img src="/Iconos/eye.svg" alt="Confirmar Contraseña" class="input-icon">
+                        <div class="error-message" id="confirm-error"></div>
+                    </div>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="btn-registro">
+                        <span class="btn-text">REGISTRARSE</span>
+                    </button>
+                </div>
+                
+                <div class="form-footer">
+                    <div class="login-link">
+                        ¿Ya tienes una cuenta? <a href="#" id="openLoginModal">Inicia sesión</a>
+                    </div>
+                    <div class="terms">
+                        Al registrarte, aceptas nuestros <a href="#">Términos y Condiciones</a> y <a href="#">Política de Privacidad</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+    <div class="login-modal" id="loginModal">
+        <div class="login-container">
+            <button class="close-login" id="closeLogin">&times;</button>
+            <h2 class="login-title">INICIAR SESIÓN</h2>
+            
+            <form class="login-form" id="loginForm">
+                <div class="input-group">
+                    <label for="login-email">Correo Electrónico</label>
+                    <input type="email" id="login-email" name="email">
+                    <img src="/Iconos/email.svg" alt="Email" class="input-icon">
+                    <div class="error-message" id="email-error"></div>
+                </div>
+                
+                <div class="input-group">
+                    <label for="login-password">Contraseña</label>
+                    <input type="password" id="login-password" name="password">
+                    <img src="/Iconos/password.svg" alt="Contraseña" class="input-icon">
+                    <div class="error-message" id="password-error"></div>
+                </div>
+                
+                <div class="login-options">
+                    <label class="remember-me">
+                        <input type="checkbox" name="remember">
+                        <span>Recordar mi cuenta</span>
+                    </label>
+                    <a href="/Olvidocontrasena/OlvidoPsw.html" class="forgot-password">¿Olvidaste tu contraseña?</a>
+                </div>
+                
+                <button type="submit" class="login-button">INICIAR SESIÓN</button>
+                
+                <div class="register-link">
+                    <span>¿No tienes una cuenta?</span>
+                    <a href="/Registro/Registro.html" id="goToRegister">Regístrate aquí</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <!-- Columna de enlaces -->
+            <div class="footer-section links">
+                <h3 class="footer-title">NAVEGACIÓN</h3>
+                <ul class="footer-menu">
+                    <li>
+                        <a href="/Pagina Principal/PgPrincipal.html">
+                            <img src="/Iconos/Inicio.svg" alt="Inicio" class="footer-icon">
+                            <span>Inicio</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Pagina Cartelera/PgCartelera.html">
+                            <img src="/Iconos/Cartelera.svg" alt="Cartelera" class="footer-icon">
+                            <span>Cartelera</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Pagina Estrenos/PgEstrenos.html">
+                            <img src="/Iconos/Estrenos.svg" alt="Próximos Estrenos" class="footer-icon">
+                            <span>Próximos Estrenos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Carameleria/Carameleria.html">
+                            <img src="/Iconos/Carameleria.svg" alt="Carameleria" class="footer-icon">
+                            <span>Carameleria</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Columna del logo y redes -->
+            <div class="footer-section brand">
+                <div class="footer-logo-container">
+                    <img src="/logo completo.png" alt="Vaky'sCinema Logo" class="footer-logo">
+                </div>
+                <div class="social-media">
+                    <a href="#" aria-label="Facebook"><img src="/Iconos/facebook-svgrepo-com.svg" alt="Facebook"></a>
+                    <a href="#" aria-label="Instagram"><img src="/Iconos/instagram-svgrepo-com.svg" alt="Instagram"></a>
+                    <a href="#" aria-label="TikTok"><img src="/Iconos/tiktok-svgrepo-com.svg" alt="TikTok"></a>
+                </div>
+            </div>
+            
+            <!-- Columna de contacto -->
+            <div class="footer-section contact">
+                <h3 class="footer-title">CONTÁCTANOS</h3>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <img src="/Iconos/Ubicacion.svg" alt="Ubicación" class="contact-icon">
+                        <span>Centro comercial Unicentro, Edo. Aragua</span>
+                    </div>
+                    <div class="contact-item">
+                        <img src="/Iconos/telefono.svg" alt="Teléfono" class="contact-icon">
+                        <span>0412-1435678</span>
+                    </div>
+                    <div class="contact-item">
+                        <img src="/Iconos/email.svg" alt="Email" class="contact-icon">
+                        <span>Vaky'sCinema@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Línea divisoria -->
+        <div class="footer-divider"></div>
+        
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p class="copyright">© 2023 Vaky'sCinema. Todos los derechos reservados</p>
+            <p class="credits">Powered by: <span>Marienmi Rovallo</span></p>
+        </div>
+    </footer>
+    <script src="Registro.js"></script>
+</body>
+</html>

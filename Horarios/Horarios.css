@@ -1,0 +1,807 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 5px;
+    background-color: #161515;
+    background-image: url('/fondo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header {
+    background-color: #2b2828;
+    width: 100%;
+    height: 95px;
+    display: flex; /* Usar flexbox para el header */
+    justify-content: space-between; /* Espacio entre los elementos del header */
+    align-items: center; /* Alinear verticalmente */
+    padding: 0 20px; /* Espaciado horizontal reducido */
+    box-sizing: border-box; /* Incluir padding en el ancho total */
+}
+
+/* Contenedor del menú hamburguesa */
+.hamburger-container {
+    position: relative;
+    z-index: 1000;
+    display: block;
+}
+
+/* Icono hamburguesa mejorado */
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    padding: 15px;
+    transition: all 0.3s ease;
+}
+
+.hamburger-icon span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: white;
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+/* Menú desplegable premium */
+.mobile-menu {
+    position: fixed;
+    top: 95px;
+    left: -220px;
+    width: 220px; /* Ancho optimizado */
+    height: auto; /* Altura flexible */
+    max-height: 70vh; /* Límite máximo */
+    background-color: rgba(43, 40, 40, 0.98); /* Fondo semitransparente */
+    backdrop-filter: blur(8px); /* Efecto vidrio esmerilado */
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.4);
+    border-right: 2px solid #ce0728; /* Borde acentuado */
+    border-radius: 0 8px 8px 0; /* Bordes redondeados solo a la derecha */
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: 999;
+    opacity: 0;
+    transform: translateX(-15px);
+    padding: 15px 0;
+    overflow-y: auto; /* Scroll si es necesario */
+}
+
+/* Mostrar menú con animación */
+.hamburger-container:hover .mobile-menu {
+    left: 0;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Transformación a "X" más suave */
+.hamburger-container:hover .hamburger-icon span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+    background: #ce0728;
+}
+
+.hamburger-container:hover .hamburger-icon span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-container:hover .hamburger-icon span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+    background: #ce0728;
+}
+
+/* Lista del menú optimizada */
+.mobile-menu_list {
+    list-style: none;
+    padding: 0 15px;
+    margin: 0;
+}
+
+/* Items con espaciado perfecto */
+.mobile-menu_item {
+    margin: 18px 0;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Enlaces elegantes */
+.mobile-menu_link {
+    text-decoration: none;
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px; /* Tamaño optimizado */
+    letter-spacing: 1.2px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Espacio icono-texto */
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+/* Iconos refinados */
+.menu-icon {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+/* Efecto hover premium */
+.mobile-menu_item:hover {
+    transform: translateX(5px);
+}
+
+.mobile-menu_item:hover .mobile-menu_link {
+    color: #ce0728;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.mobile-menu_item:hover .menu-icon {
+    filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(320deg);
+    transform: scale(1.1);
+}
+
+/* Indicador activo sutil */
+.mobile-menu_item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background: #ce0728;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s ease;
+}
+
+.mobile-menu_item:hover::after {
+    transform: scaleY(1);
+}
+
+/* Ocultar el menú desktop original */
+.menu {
+    display: none;
+}
+
+.logo {
+    width: 200px; /* Ajustar el tamaño de la logo */
+    height: auto; /* Mantener la proporción */
+    margin: 0 auto; /* Centrar la logo */
+}
+
+.button-container {
+    display: flex;
+    gap: 15px; /* Espacio entre botones aumentado */
+    padding: 0 20px; /* Ajuste de padding */
+}
+
+button {
+    padding: 10px 15px; /* Espaciado interno ajustado */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    font-size: 20px; /* Tamaño de la fuente */
+    transition: background-color 0.3s; /* Efecto de transición */
+    
+}
+
+.login-button, .register-button {
+    background: transparent;
+    color: white; /* Texto blanco */
+    border: 2px solid #ce0728; /* Borde blanco delgado */
+    padding: 10px 24px;
+    border-radius: 50px; /* Esquinas redondeadas */
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Transición suave */
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Efecto hover: Borde rojo + levitación sutil */
+.login-button:hover, .register-button:hover {
+    color: white;
+    border-color: #ffd700; /* Borde rojo */
+    transform: translateY(-2px);
+}
+
+.login-button:active, .register-button:active {
+    transform: translateY(-1px) scale(0.98); /* Pequeño rebote */
+}
+
+.login-button a, .register-button a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* Estilos para página de horarios */
+.horarios-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    color: #fff;
+}
+
+.pelicula-info {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 50px;
+    align-items: flex-start;
+}
+
+.poster-grande {
+    width: 300px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.info-container h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+/* Estilos para los detalles técnicos */
+.detalles-tecnicos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 30px;
+    background: rgba(40, 40, 40, 0.6);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #ce0728;
+}
+
+.detalle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+}
+
+.detalle img {
+    width: 18px;
+    height: 18px;
+    filter: brightness(0) invert(0.7);
+}
+
+/* Ajuste para el meta-info */
+.meta-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(206, 7, 40, 0.3);
+}
+
+.sinopsis h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    color: #ce0728;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.sinopsis p {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #e0e0e0;
+}
+
+.horarios-section {
+    background: rgba(30, 30, 30, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #ce0728;
+}
+
+.horarios-section h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 30px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.dias-horarios {
+    display: grid;
+    gap: 30px;
+}
+
+.dia {
+    background: rgba(40, 40, 40, 0.6);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.dia h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.horarios {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.hora-btn {
+    background: rgba(206, 7, 40, 0.3);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.hora-btn:hover {
+    background: rgba(206, 7, 40, 0.6);
+}
+
+.hora-btn.seleccionado {
+    background: #ce0728;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(206, 7, 40, 0.4);
+}
+
+.btn-comprar {
+    background: #ce0728;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 100%;
+    max-width: 300px;
+    margin: 40px auto 0;
+    display: block;
+}
+
+.btn-comprar:hover {
+    background: #a00630;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(206, 7, 40, 0.4);
+}
+
+.comprar-btn-container {
+    text-align: center;
+}
+
+
+/* Estilos para el modal de login */
+.login-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.login-modal.active {
+    display: flex;
+    opacity: 1;
+}
+
+.login-container {
+    background-color: #2b2828;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    padding: 30px;
+    box-sizing: border-box;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    border: 1px solid #ce0728;
+    animation: slideDown 0.4s ease;
+    margin: 20px;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.close-login {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s;
+    z-index: 1;
+}
+
+.close-login:hover {
+    color: #ce0728;
+}
+
+.login-title {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #fff;
+    font-size: 2.2rem;
+    text-align: center;
+    margin: -50px 20px 65px 0; /* Ajustado margen superior negativo */
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(206, 7, 40, 0.5);
+    position: relative;
+    top: 40px;
+}
+
+.login-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #ce0728;
+    margin: 0px auto 0;
+    box-shadow: 0 0 10px rgba(206, 7, 40, 0.7);
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    margin-top: 10px; /* Espacio adicional */
+}
+
+.input-group {
+    position: relative;
+    width: 100%;
+}
+
+.input-group label {
+    display: block;
+    color: #e0e0e0;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px 12px 40px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #1a1a1a;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.3s;
+    box-sizing: border-box;
+}
+
+.input-group input:focus {
+    border-color: #ce0728;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(206, 7, 40, 0.3);
+}
+
+.input-icon {
+    position: absolute;
+    left: 12px;
+    top: 38px;
+    width: 18px;
+    height: 18px;
+    filter: brightness(0) invert(0.7);
+}
+
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -10px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #ccc;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.remember-me input {
+    accent-color: #ce0728;
+}
+
+.forgot-password {
+    color: #ccc;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.forgot-password:hover {
+    color: #ffd700;
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 25px; /* Más espacio arriba */
+    font-family: 'Montserrat', sans-serif;
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+.register-link a {
+    color: #ffd700;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 5px;
+    transition: color 0.3s;
+}
+
+.register-link a:hover {
+    color: #ce0728;
+}
+
+.error-message {
+    color: #ff6b6b;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    font-family: 'Montserrat', sans-serif;
+    display: none;
+}
+
+.input-group.error input {
+    border-color: #ff6b6b;
+    box-shadow: 0 0 0 2px rgba(255, 107, 107, 0.3);
+}
+
+.input-group.success input {
+    border-color: #51cf66;
+}
+
+/* Estilos generales del footer */
+.site-footer {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 60px 0 20px;
+    font-family: 'Montserrat', 'Playfair Display';
+    width: 100%;
+    min-width: 1200px; /* Ancho mínimo fijo */
+    margin-top: 80px;
+    
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    width: 33.33%;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.footer-title {
+    color: #ce0728;
+    font-size: 25px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue';
+
+
+}
+
+/* Estilos para la sección de enlaces */
+.footer-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-menu li {
+    margin-bottom: 12px;
+}
+
+.footer-menu a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 17px;
+    transition: color 0.3s;
+    display: block;
+}
+
+.footer-menu a:hover {
+    color: #ce0728;
+    padding-left: 5px;
+}
+
+/* Estilos para la sección de enlaces con iconos */
+.footer-menu li a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 17px;
+    transition: all 0.3s;
+    padding: 5px 0;
+}
+
+.footer-icon {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+    transition: all 0.3s;
+}
+
+.footer-menu li a:hover {
+    color: #ce0728;
+    transform: translateX(5px);
+}
+
+.footer-menu li a:hover .footer-icon {
+    filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(320deg);
+}
+
+/* Estilos para el logo y redes sociales */
+.brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Alinea todo al inicio del contenedor */
+    height: 100%; /* Ocupa toda la altura disponible */
+    padding-top: 0; /* Elimina cualquier padding superior */
+    margin-top: -15px; /* Ajuste fino para alinear con las otras secciones */
+}
+
+.footer-logo-container {
+    margin-bottom: 5px; /* Espacio entre logo y redes sociales */
+}
+
+.footer-logo {
+    width: 280px; /* Reduje ligeramente para mejor proporción */
+    height: auto;
+    margin-top: -50px; /* Ajuste fino de posición vertical */
+    margin-left: -150px;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: -80px; /* Espacio adicional */
+    margin-right: 140px;
+}
+
+.social-media a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.social-media a:hover {
+    background-color: #ce0728;
+    transform: translateY(-3px);
+}
+
+.social-media img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+}
+
+/* Estilos para la sección de contacto */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #e0e0e0;
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+
+.contact-icon {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+    flex-shrink: 0;
+}
+
+.contact-item i {
+    width: 20px;
+    text-align: start;
+    color: #ce0728;
+    margin-left: -20px;
+}
+
+/* Línea divisoria */
+.footer-divider {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 20px auto;
+    width: 1200px;
+}
+
+/* Estilos para el pie de página */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-size: 14px;
+    color: #999;
+}
+
+.copyright, .credits {
+    margin: 10px 0;
+}
+
+.credits span {
+    color: #ffd700;
+    font-weight: bold;
+}

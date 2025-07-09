@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="PgCartelera.css">
+    <title>Vaky's Cine/Cartelera</title>
+    <link rel="stylesheet" href="/fuentes.css">
+<body>
+    <header>
+        <div class="hamburger-container">
+            <div class="hamburger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!-- Menú desplegable -->
+            <nav class="mobile-menu">
+                <ul class="mobile-menu_list">
+                    <li class="mobile-menu_item">
+                        <a href="/Pagina Principal/PgPrincipal.html" class="mobile-menu_link">
+                            <img src="/Iconos/Inicio.svg" alt="Inicio" class="menu-icon">
+                            <span>Inicio</span>
+                        </a>
+                    </li>
+                    <li class="mobile-menu_item">
+                        <a href="PgCartelera.html" class="mobile-menu_link">
+                            <img src="/Iconos/Cartelera.svg" alt="Cartelera" class="menu-icon">
+                            <span>Cartelera</span>
+                        </a>
+                    </li>
+                    <li class="mobile-menu_item">
+                        <a href="/Pagina Estrenos/PgEstrenos.html" class="mobile-menu_link">
+                            <img src="/Iconos/Estrenos.svg" alt="Próximos Estrenos" class="menu-icon">
+                            <span>Próximos estrenos</span>
+                        </a>
+                    </li>
+                    <li class="mobile-menu_item">
+                        <a href="/Carameleria/Carameleria.html" class="mobile-menu_link">
+                            <img src="/Iconos/Carameleria.svg" alt="Carameleria" class="menu-icon">
+                            <span>Carameleria</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <img src="/logo.png" alt="logo" class="logo">
+        <div class="button-container">
+            <a href="#" class="login-button" id="header-login-btn">Iniciar Sesión</a>
+            <a href="/Registro/Registro.html" class="register-button">Registrarse</a>
+        </div>
+    </header>
+    <main class="cartelera-container">
+        <h1 class="titulo-cartelera">CARTELERA</h1>
+        
+        <!-- Primera fila - 4 películas -->
+        <div class="fila-peliculas">
+            <!-- Película 1 -->
+            <div class="pelicula-card">
+                <div class="poster-container">
+                    <img src="/Peliculas/mufasa.jpg" alt="Mufasa" class="poster">
+                    <div class="overlay">
+                        <h3>Mufasa: El Rey León</h3>
+                        <p class="sinopsis">Una inundación separa al cachorro Mufasa de sus padres, pero el rey de los leones lo acoge como a uno de los suyos...</p>
+                        <div class="info-extra">
+                            <span class="genero">Animación • Aventura</span>
+                            <span class="duracion">1h 45m</span>
+                        </div>
+                        <a href="/Horarios/HorariosMufasa.html" class="btn-horarios">
+                            <span>Horarios</span>
+                            <svg class="icon-arrow" viewBox="0 0 20 20">
+                                <path d="M10 17L15 10 10 3" stroke="currentColor" stroke-width="2" fill="none"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Película 2 -->
+            <div class="pelicula-card">
+                <div class="poster-container">
+                    <img src="/Peliculas/flow.jpg" alt="Flow" class="poster">
+                    <div class="overlay">
+                        <h3>Flow</h3>
+                        <p class="sinopsis">El gato es un animal solitario, pero cuando su hogar es devastado por una gran inundación, encuentra...</p>
+                        <div class="info-extra">
+                            <span class="genero">Drama • Aventura</span>
+                            <span class="duracion">1h 38m</span>
+                        </div>
+                        <a href="/Horarios/HorariosFlow.html" class="btn-horarios">
+                            <span>Horarios</span>
+                            <svg class="icon-arrow" viewBox="0 0 20 20">
+                                <path d="M10 17L15 10 10 3" stroke="currentColor" stroke-width="2" fill="none"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Película 3 -->
+            <div class="pelicula-card">
+                <div class="poster-container">
+                    <img src="/Peliculas/interstellar.jpg" alt="Interstellar" class="poster">
+                    <div class="overlay">
+                        <h3>Interstellar</h3>
+                        <p class="sinopsis">Un grupo de científicos y exploradores se embarcan en un viaje espacial para encontrar un nuevo hogar...</p>
+                        <div class="info-extra">
+                            <span class="genero">Ciencia Ficción • Drama</span>
+                            <span class="duracion">2h 49m</span>
+                        </div>
+                        <a href="/Horarios/HorariosInterstellar.html" class="btn-horarios">
+                            <span>Horarios</span>
+                            <svg class="icon-arrow" viewBox="0 0 20 20">
+                                <path d="M10 17L15 10 10 3" stroke="currentColor" stroke-width="2" fill="none"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Película 4 - Nueva película añadida -->
+            <div class="pelicula-card">
+                <div class="poster-container">
+                    <img src="/Peliculas/memoriasdeuncaracol.jpg" alt="Memorias de un caracol" class="poster">
+                    <div class="overlay">
+                        <h3>Memorias de un Caracol</h3>
+                        <p class="sinopsis">Grace es una niña solitaria con un amor por los caracoles y un intenso amor por los libros...</p>
+                        <div class="info-extra">
+                            <span class="genero">Drama • Familiar</span>
+                            <span class="duracion">1h 52m</span>
+                        </div>
+                        <a href="/Horarios/HorariosMDUC.html" class="btn-horarios">
+                            <span>Horarios</span>
+                            <svg class="icon-arrow" viewBox="0 0 20 20">
+                                <path d="M10 17L15 10 10 3" stroke="currentColor" stroke-width="2" fill="none"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Segunda fila - 3 películas -->
+        <div class="fila-peliculas">
+            <!-- Película 5 -->
+            <div class="pelicula-card">
+                <div class="poster-container">
+                    <img src="/Peliculas/fnaf.jpg" alt="Five Nights at Freddy's" class="poster">
+                    <div class="overlay">
+                        <h3>Five Nights at Freddy's</h3>
+                        <p class="sinopsis">Un problemático guardia de seguridad empieza a trabajar en la pizzería Freddy Fazbear's...</p>
+                        <div class="info-extra">
+                            <span class="genero">Terror • Suspenso</span>
+                            <span class="duracion">1h 50m</span>
+                        </div>
+                        <a href="/Horarios/HorarioFnaf.html" class="btn-horarios">
+                            <span>Horarios</span>
+                            <svg class="icon-arrow" viewBox="0 0 20 20">
+                                <path d="M10 17L15 10 10 3" stroke="currentColor" stroke-width="2" fill="none"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Película 6 -->
+            <div class="pelicula-card">
+                <div class="poster-container">
+                    <img src="/Peliculas/weliveintime.jpg" alt="El tiempo que tenemos" class="poster">
+                    <div class="overlay">
+                        <h3>El Tiempo que Tenemos</h3>
+                        <p class="sinopsis">Almut y Tobias, dos jóvenes adultos, se conocen de la manera más inesperada...</p>
+                        <div class="info-extra">
+                            <span class="genero">Romance • Drama</span>
+                            <span class="duracion">1h 45m</span>
+                        </div>
+                        <a href="/Horarios/HorarioWLIT.html" class="btn-horarios">
+                            <span>Horarios</span>
+                            <svg class="icon-arrow" viewBox="0 0 20 20">
+                                <path d="M10 17L15 10 10 3" stroke="currentColor" stroke-width="2" fill="none"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Película 7 -->
+            <div class="pelicula-card">
+                <div class="poster-container">
+                    <img src="/Peliculas/vertigo.jpg" alt="Vertigo" class="poster">
+                    <div class="overlay">
+                        <h3>Vertigo</h3>
+                        <p class="sinopsis">Para Becky y Hunter, la vida trata de superar tus miedos y empujar tus límites...</p>
+                        <div class="info-extra">
+                            <span class="genero">Aventura • Drama</span>
+                            <span class="duracion">1h 44m</span>
+                        </div>
+                        <a href="/Horarios/HorariosVertigo.html" class="btn-horarios">
+                            <span>Horarios</span>
+                            <svg class="icon-arrow" viewBox="0 0 20 20">
+                                <path d="M10 17L15 10 10 3" stroke="currentColor" stroke-width="2" fill="none"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="login-modal" id="loginModal">
+        <div class="login-container">
+            <button class="close-login" id="closeLogin">&times;</button>
+            <h2 class="login-title">INICIAR SESIÓN</h2>
+            
+            <form class="login-form" id="loginForm">
+                <div class="input-group">
+                    <label for="login-email">Correo Electrónico</label>
+                    <input type="email" id="login-email" name="email">
+                    <img src="/Iconos/email.svg" alt="Email" class="input-icon">
+                    <div class="error-message" id="email-error"></div>
+                </div>
+                
+                <div class="input-group">
+                    <label for="login-password">Contraseña</label>
+                    <input type="password" id="login-password" name="password">
+                    <img src="/Iconos/password.svg" alt="Contraseña" class="input-icon">
+                    <div class="error-message" id="password-error"></div>
+                </div>
+                
+                <div class="login-options">
+                    <label class="remember-me">
+                        <input type="checkbox" name="remember">
+                        <span>Recordar mi cuenta</span>
+                    </label>
+                    <a href="/Olvidocontrasena/OlvidoPsw.html" class="forgot-password">¿Olvidaste tu contraseña?</a>
+                </div>
+                
+                <button type="submit" class="login-button">INICIAR SESIÓN</button>
+                
+                <div class="register-link">
+                    <span>¿No tienes una cuenta?</span>
+                    <a href="/Registro/Registro.html" id="goToRegister">Regístrate aquí</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <!-- Columna de enlaces -->
+            <div class="footer-section links">
+                <h3 class="footer-title">NAVEGACIÓN</h3>
+                <ul class="footer-menu">
+                    <li>
+                        <a href="/Pagina Principal/PgPrincipal.html">
+                            <img src="/Iconos/Inicio.svg" alt="Inicio" class="footer-icon">
+                            <span>Inicio</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="PgCartelera.html">
+                            <img src="/Iconos/Cartelera.svg" alt="Cartelera" class="footer-icon">
+                            <span>Cartelera</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Pagina Estrenos/PgEstrenos.html">
+                            <img src="/Iconos/Estrenos.svg" alt="Próximos Estrenos" class="footer-icon">
+                            <span>Próximos Estrenos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Carameleria/Carameleria.html">
+                            <img src="/Iconos/Carameleria.svg" alt="Carameleria" class="footer-icon">
+                            <span>Carameleria</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Columna del logo y redes -->
+            <div class="footer-section brand">
+                <div class="footer-logo-container">
+                    <img src="/logo completo.png" alt="Vaky'sCinema Logo" class="footer-logo">
+                </div>
+                <div class="social-media">
+                    <a href="#" aria-label="Facebook"><img src="/Iconos/facebook-svgrepo-com.svg" alt="Facebook"></a>
+                    <a href="#" aria-label="Instagram"><img src="/Iconos/instagram-svgrepo-com.svg" alt="Instagram"></a>
+                    <a href="#" aria-label="TikTok"><img src="/Iconos/tiktok-svgrepo-com.svg" alt="TikTok"></a>
+                </div>
+            </div>
+            
+            <!-- Columna de contacto -->
+            <div class="footer-section contact">
+                <h3 class="footer-title">CONTÁCTANOS</h3>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <img src="/Iconos/Ubicacion.svg" alt="Ubicación" class="contact-icon">
+                        <span>Centro comercial Unicentro, Edo. Aragua</span>
+                    </div>
+                    <div class="contact-item">
+                        <img src="/Iconos/telefono.svg" alt="Teléfono" class="contact-icon">
+                        <span>0412-1435678</span>
+                    </div>
+                    <div class="contact-item">
+                        <img src="/Iconos/email.svg" alt="Email" class="contact-icon">
+                        <span>Vaky'sCinema@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Línea divisoria -->
+        <div class="footer-divider"></div>
+        
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p class="copyright">© 2023 Vaky'sCinema. Todos los derechos reservados</p>
+            <p class="credits">Powered by: <span>Marienmi Rovallo</span></p>
+        </div>
+    </footer>
+    <script src="PgCartelera.js"></script>
+</body>
+</html>

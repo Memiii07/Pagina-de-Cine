@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Carameleria.css">
+    <link rel="stylesheet" href="/fuentes.css">
+    <title>Vaky's Cine/Carameleria</title>
+</head>
+<body>
+    <header>
+        <div class="hamburger-container">
+            <div class="hamburger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!-- Menú desplegable -->
+            <nav class="mobile-menu">
+                <ul class="mobile-menu_list">
+                    <li class="mobile-menu_item">
+                        <a href="/Pagina Principal/PgPrincipal.html" class="mobile-menu_link">
+                            <img src="/Iconos/Inicio.svg" alt="Inicio" class="menu-icon">
+                            <span>Inicio</span>
+                        </a>
+                    </li>
+                    <li class="mobile-menu_item">
+                        <a href="/Pagina Cartelera/PgCartelera.html" class="mobile-menu_link">
+                            <img src="/Iconos/Cartelera.svg" alt="Cartelera" class="menu-icon">
+                            <span>Cartelera</span>
+                        </a>
+                    </li>
+                    <li class="mobile-menu_item">
+                        <a href="/Pagina Estrenos/PgEstrenos.html" class="mobile-menu_link">
+                            <img src="/Iconos/Estrenos.svg" alt="Próximos Estrenos" class="menu-icon">
+                            <span>Próximos estrenos</span>
+                        </a>
+                    </li>
+                    <li class="mobile-menu_item">
+                        <a href="/Carameleria/Carameleria.html" class="mobile-menu_link">
+                            <img src="/Iconos/Carameleria.svg" alt="Carameleria" class="menu-icon">
+                            <span>Carameleria</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <img src="/logo.png" alt="logo" class="logo">
+        <div class="button-container">
+            <a href="#" class="login-button" id="header-login-btn">Iniciar Sesión</a>
+            <a href="/Registro/Registro.html" class="register-button">Registrarse</a>
+        </div>
+    </header>
+    <main class="carameleria-container">
+        <h1 class="carameleria-title">CARAMELERÍA</h1>
+        
+        <!-- Navegación horizontal por categorías -->
+        <nav class="categorias-nav">
+            <ul class="categorias-list">
+                <li><a href="#combos" class="categoria-link active">Combos</a></li>
+                <li><a href="#cotufas" class="categoria-link">Cotufas</a></li>
+                <li><a href="#bebidas" class="categoria-link">Bebidas</a></li>
+                <li><a href="#dulces" class="categoria-link">Dulces</a></li>
+                <li><a href="#snacks" class="categoria-link">Snacks</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Sección de Combos -->
+        <section id="combos" class="productos-section">
+            <h2 class="section-title">COMBOS</h2>
+            <div class="productos-grid">
+                <!-- Producto 1 -->
+                <div class="producto-card">
+                    <img src="/Comida/combo familiar.JPG" alt="Combo Familiar" class="producto-img">
+                    <h3 class="producto-nombre">Combo Familiar</h3>
+                    <p class="producto-desc">2 cotufas grandes, 4 bebidas medianas y 2 chocolates</p>
+                    <p class="producto-precio">$13.00</p>
+                    <div class="producto-controles">
+                        <button class="cantidad-btn menos">-</button>
+                        <span class="cantidad">0</span>
+                        <button class="cantidad-btn mas">+</button>
+                    </div>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                </div>
+                
+                <!-- Producto 2 -->
+                <div class="producto-card">
+                    <img src="/Comida/combo pareja.JPG" alt="Combo Pareja" class="producto-img">
+                    <h3 class="producto-nombre">Combo Pareja</h3>
+                    <p class="producto-desc">1 cotufa grande, 2 bebidas medianas y 1 chocolate</p>
+                    <p class="producto-precio">$8.00</p>
+                    <div class="producto-controles">
+                        <button class="cantidad-btn menos">-</button>
+                        <span class="cantidad">0</span>
+                        <button class="cantidad-btn mas">+</button>
+                    </div>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                </div>
+                
+                <!-- Producto 3 -->
+                <div class="producto-card">
+                    <img src="/Comida/combo individual.JPG" alt="Combo Individual" class="producto-img">
+                    <h3 class="producto-nombre">Combo Individual</h3>
+                    <p class="producto-desc">1 cotufa mediana, 1 bebida pequeña y 1 dulce</p>
+                    <p class="producto-precio">$5.00</p>
+                    <div class="producto-controles">
+                        <button class="cantidad-btn menos">-</button>
+                        <span class="cantidad">0</span>
+                        <button class="cantidad-btn mas">+</button>
+                    </div>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                </div>
+
+                <!-- Producto 4 -->
+                <div class="producto-card">
+                    <img src="/Comida/combo kids.JPG" alt="Combo Kids" class="producto-img">
+                    <h3 class="producto-nombre">Combo Kids</h3>
+                    <p class="producto-desc">1 cotufa mediana, 1 bebida pequeña y 3 dulces</p>
+                    <p class="producto-precio">$7.50</p>
+                    <div class="producto-controles">
+                        <button class="cantidad-btn menos">-</button>
+                        <span class="cantidad">0</span>
+                        <button class="cantidad-btn mas">+</button>
+                    </div>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                </div>
+
+                <div class="producto-card">
+                    <img src="/Comida/combo doble.jpg" alt="Combo Kids" class="producto-img">
+                    <h3 class="producto-nombre">Combo Kids</h3>
+                    <p class="producto-desc">2 cotufas medianas, 2 bebida pequeña y 1 gomita </p>
+                    <p class="producto-precio">$8.00</p>
+                    <div class="producto-controles">
+                        <button class="cantidad-btn menos">-</button>
+                        <span class="cantidad">0</span>
+                        <button class="cantidad-btn mas">+</button>
+                    </div>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                </div>
+
+                <div class="producto-card">
+                    <img src="/Comida/combo doble mini.jpg" alt="Combo Doble mini" class="producto-img">
+                    <h3 class="producto-nombre">Combo Doble Mini</h3>
+                    <p class="producto-desc">2 cotufas pequeñas, 2 bebidas pequeña y 1 chocolate</p>
+                    <p class="producto-precio">$7.00</p>
+                    <div class="producto-controles">
+                        <button class="cantidad-btn menos">-</button>
+                        <span class="cantidad">0</span>
+                        <button class="cantidad-btn mas">+</button>
+                    </div>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sección de Cotufas -->
+        <section id="cotufas" class="productos-section">
+            <h2 class="section-title">COTUFAS</h2>
+            <div class="productos-grid">
+                <!-- Producto 1 -->
+                <div class="producto-card">
+                    <img src="/Comida/cotufa grande.JPG" alt="Cotufa Grande" class="producto-img">
+                    <h3 class="producto-nombre">Cotufa Grande</h3>
+                    <p class="producto-desc">Cotufa salada tamaño familiar (500g)</p>
+                    <p class="producto-precio">$5.00</p>
+                    <div class="producto-controles">
+                        <button class="cantidad-btn menos">-</button>
+                        <span class="cantidad">0</span>
+                        <button class="cantidad-btn mas">+</button>
+                    </div>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                </div>
+                
+                <!-- Producto 2 -->
+                <div class="producto-card">
+                    <img src="/Comida/cotufa mediana.JPG" alt="Cotufa Mediana" class="producto-img">
+                    <h3 class="producto-nombre">Cotufa Mediana</h3>
+                    <p class="producto-desc">Cotufa salada tamaño individual (250g)</p>
+                    <p class="producto-precio">$4.00</p>
+                    <div class="producto-controles">
+                        <button class="cantidad-btn menos">-</button>
+                        <span class="cantidad">0</span>
+                        <button class="cantidad-btn mas">+</button>
+                    </div>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                </div>
+                
+                <!-- Producto 3 -->
+                <div class="producto-card">
+                    <img src="/Comida/cotufa dulce.JPG" alt="Cotufa Dulce" class="producto-img">
+                    <h3 class="producto-nombre">Cotufa Dulce</h3>
+                    <p class="producto-desc">Cotufa con caramelo tamaño mediano (300g)</p>
+                    <p class="producto-precio">$4.50</p>
+                    <div class="producto-controles">
+                        <button class="cantidad-btn menos">-</button>
+                        <span class="cantidad">0</span>
+                        <button class="cantidad-btn mas">+</button>
+                    </div>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                </div>
+
+                <!-- Producto 4 -->
+                <div class="producto-card">
+                    <img src="/Comida/cotufa bolsa.JPG" alt="Cotufa pequeña" class="producto-img">
+                    <h3 class="producto-nombre">Cotufa pequeña</h3>
+                    <p class="producto-desc">Cotufa salada tamaño pequeño (200g)</p>
+                    <p class="producto-precio">$3.50</p>
+                    <div class="producto-controles">
+                        <button class="cantidad-btn menos">-</button>
+                        <span class="cantidad">0</span>
+                        <button class="cantidad-btn mas">+</button>
+                    </div>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                </div>
+
+                <div class="producto-card">
+                    <img src="/Comida/cotufa sabor a limon.jpg" alt="CotufaLimon" class="producto-img">
+                    <h3 class="producto-nombre">Cotufa sabor a Limon</h3>
+                    <p class="producto-desc">Cotufa saborizada a limon tamaño pequeño (200g)</p>
+                    <p class="producto-precio">$4.00</p>
+                    <div class="producto-controles">
+                        <button class="cantidad-btn menos">-</button>
+                        <span class="cantidad">0</span>
+                        <button class="cantidad-btn mas">+</button>
+                    </div>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                </div>
+
+                <div class="producto-card">
+                    <img src="/Comida/cotufa picante.jpg" alt="Cotufa Picante" class="producto-img">
+                    <h3 class="producto-nombre">Cotufa Picante</h3>
+                    <p class="producto-desc">Cotufa Picante tamaño Mediano (200g)</p>
+                    <p class="producto-precio">$4.50</p>
+                    <div class="producto-controles">
+                        <button class="cantidad-btn menos">-</button>
+                        <span class="cantidad">0</span>
+                        <button class="cantidad-btn mas">+</button>
+                    </div>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sección de Bebidas -->
+        <section id="bebidas" class="productos-section">
+            <h2 class="section-title">BEBIDAS</h2>
+            <div class="productos-grid">
+                <!-- Producto 1 -->
+                <div class="producto-card">
+                    <img src="/Comida/chinotto.jpeg" alt="Chinoto" class="producto-img">
+                    <h3 class="producto-nombre">Chinotto</h3>
+                    <p class="producto-desc">Refresco 50ml </p>
+                    <p class="producto-precio">$2.00</p>
+                    <div class="producto-controles">
+                        <button class="cantidad-btn menos">-</button>
+                        <span class="cantidad">0</span>
+                        <button class="cantidad-btn mas">+</button>
+                    </div>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                </div>
+                
+                <!-- Producto 2 -->
+                <div class="producto-card">
+                    <img src="/Comida/cocacola.jpg" alt="Coca-cola" class="producto-img">
+                    <h3 class="producto-nombre">Coca-Cola</h3>
+                    <p class="producto-desc">Refresco 500ml</p>
+                    <p class="producto-precio">$2.00</p>
+                    <div class="producto-controles">
+                        <button class="cantidad-btn menos">-</button>
+                        <span class="cantidad">0</span>
+                        <button class="cantidad-btn mas">+</button>
+                    </div>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                </div>
+                
+                <!-- Producto 3 -->
+                <div class="producto-card">
+                    <img src="/Comida/agua.jpg" alt="Agua Mineral" class="producto-img">
+                    <h3 class="producto-nombre">Agua Mineral</h3>
+                    <p class="producto-desc">Botella de agua 500ml</p>
+                    <p class="producto-precio">$1.50</p>
+                    <div class="producto-controles">
+                        <button class="cantidad-btn menos">-</button>
+                        <span class="cantidad">0</span>
+                        <button class="cantidad-btn mas">+</button>
+                    </div>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                </div>
+
+                <!-- Producto 4 -->
+                <div class="producto-card">
+                    <img src="/Comida/jugo.jpg" alt="Jugo natural" class="producto-img">
+                    <h3 class="producto-nombre">Jugo Natural</h3>
+                    <p class="producto-desc">Botella de jugo 500ml/Naranja, Durazno, Pera</p>
+                    <p class="producto-precio">$2.50</p>
+                    <div class="producto-controles">
+                        <button class="cantidad-btn menos">-</button>
+                        <span class="cantidad">0</span>
+                        <button class="cantidad-btn mas">+</button>
+                    </div>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                </div>
+
+                <div class="producto-card">
+                    <img src="/Comida/malta.jfif" alt="Malta" class="producto-img">
+                    <h3 class="producto-nombre">Malta</h3>
+                    <p class="producto-desc">Botella de malta 250ml</p>
+                    <p class="producto-precio">$3.00</p>
+                    <div class="producto-controles">
+                        <button class="cantidad-btn menos">-</button>
+                        <span class="cantidad">0</span>
+                        <button class="cantidad-btn mas">+</button>
+                    </div>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                </div>
+
+                <div class="producto-card">
+                    <img src="/Comida/Nestea.jfif" alt="Nestea" class="producto-img">
+                    <h3 class="producto-nombre">Nestea</h3>
+                    <p class="producto-desc">Botella de Nestea 500ml/Durazno, Limon</p>
+                    <p class="producto-precio">$2.80</p>
+                    <div class="producto-controles">
+                        <button class="cantidad-btn menos">-</button>
+                        <span class="cantidad">0</span>
+                        <button class="cantidad-btn mas">+</button>
+                    </div>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sección de Dulces -->
+        <section id="dulces" class="productos-section">
+            <h2 class="section-title">DULCES</h2>
+            <div class="productos-grid">
+                <!-- Producto 1 -->
+                <div class="producto-card">
+                    <img src="/Comida/cocosete.JPG" alt="Chocolate" class="producto-img">
+                    <h3 class="producto-nombre">Chocolate</h3>
+                    <p class="producto-desc">Tableta de chocolate con leche 100g</p>
+                    <p class="producto-precio">$2.00</p>
+                    <div class="producto-controles">
+                        <button class="cantidad-btn menos">-</button>
+                        <span class="cantidad">0</span>
+                        <button class="cantidad-btn mas">+</button>
+                    </div>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                </div>
+                
+                <!-- Producto 2 -->
+                <div class="producto-card">
+                    <img src="/Comida/gomita.JPG" alt="Gomitas" class="producto-img">
+                    <h3 class="producto-nombre">Gomitas</h3>
+                    <p class="producto-desc">Bolsa de gomitas surtidas 150g</p>
+                    <p class="producto-precio">$3.00</p>
+                    <div class="producto-controles">
+                        <button class="cantidad-btn menos">-</button>
+                        <span class="cantidad">0</span>
+                        <button class="cantidad-btn mas">+</button>
+                    </div>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                </div>
+                
+                <!-- Producto 3 -->
+                <div class="producto-card">
+                    <img src="/Comida/pirulin.JPG" alt="Pirulin" class="producto-img">
+                    <h3 class="producto-nombre">Pirulin</h3>
+                    <p class="producto-desc">Empaque de pirulin (16gr)</p>
+                    <p class="producto-precio">$1.50</p>
+                    <div class="producto-controles">
+                        <button class="cantidad-btn menos">-</button>
+                        <span class="cantidad">0</span>
+                        <button class="cantidad-btn mas">+</button>
+                    </div>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                </div>
+
+                <!-- Producto 4 -->
+                <div class="producto-card">
+                    <img src="/Comida/chocolate.JPG" alt="Cocosette" class="producto-img">
+                    <h3 class="producto-nombre">Cocosette</h3>
+                    <p class="producto-desc">Barras de cocosete (50gr)</p>
+                    <p class="producto-precio">$2.00</p>
+                    <div class="producto-controles">
+                        <button class="cantidad-btn menos">-</button>
+                        <span class="cantidad">0</span>
+                        <button class="cantidad-btn mas">+</button>
+                    </div>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                </div>
+
+                <div class="producto-card">
+                    <img src="/Comida/palitos.jpg" alt="Palitos" class="producto-img">
+                    <h3 class="producto-nombre">Palitos</h3>
+                    <p class="producto-desc">Palitos de chocolate (30gr)</p>
+                    <p class="producto-precio">$1.00</p>
+                    <div class="producto-controles">
+                        <button class="cantidad-btn menos">-</button>
+                        <span class="cantidad">0</span>
+                        <button class="cantidad-btn mas">+</button>
+                    </div>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                </div>
+
+                <div class="producto-card">
+                    <img src="/Comida/flips.jpg" alt="Flips" class="producto-img">
+                    <h3 class="producto-nombre">Flips</h3>
+                    <p class="producto-desc">Caja de Flips (220gr)</p>
+                    <p class="producto-precio">$3.00</p>
+                    <div class="producto-controles">
+                        <button class="cantidad-btn menos">-</button>
+                        <span class="cantidad">0</span>
+                        <button class="cantidad-btn mas">+</button>
+                    </div>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sección de Snacks -->
+        <section id="snacks" class="productos-section">
+            <h2 class="section-title">SNACKS</h2>
+            <div class="productos-grid">
+                <!-- Producto 1 -->
+                <div class="producto-card">
+                    <img src="/Comida/dorito.jpg" alt="Doritos" class="producto-img">
+                    <h3 class="producto-nombre">Doritos</h3>
+                    <p class="producto-desc">Doritos 300gr</p>
+                    <p class="producto-precio">$2.50</p>
+                    <div class="producto-controles">
+                        <button class="cantidad-btn menos">-</button>
+                        <span class="cantidad">0</span>
+                        <button class="cantidad-btn mas">+</button>
+                    </div>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                </div>
+                
+                <!-- Producto 2 -->
+                <div class="producto-card">
+                    <img src="/Comida/natuchips.jfif" alt="Natuchips" class="producto-img">
+                    <h3 class="producto-nombre">Natuchips</h3>
+                    <p class="producto-desc">Natuchips 300gr</p>
+                    <p class="producto-precio">$2.00</p>
+                    <div class="producto-controles">
+                        <button class="cantidad-btn menos">-</button>
+                        <span class="cantidad">0</span>
+                        <button class="cantidad-btn mas">+</button>
+                    </div>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                </div>
+                
+                <!-- Producto 3 -->
+                <div class="producto-card">
+                    <img src="/Comida/jacks.jpg" alt="Jacks" class="producto-img">
+                    <h3 class="producto-nombre">Jacks</h3>
+                    <p class="producto-desc">Jacks 300gr</p>
+                    <p class="producto-precio">$4.00</p>
+                    <div class="producto-controles">
+                        <button class="cantidad-btn menos">-</button>
+                        <span class="cantidad">0</span>
+                        <button class="cantidad-btn mas">+</button>
+                    </div>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                </div>
+
+                <!-- Producto 4 -->
+                <div class="producto-card">
+                    <img src="/Comida/ruffles.jpg" alt="Ruffles" class="producto-img">
+                    <h3 class="producto-nombre">Ruffles</h3>
+                    <p class="producto-desc">Ruffles 300gr</p>
+                    <p class="producto-precio">$3.00</p>
+                    <div class="producto-controles">
+                        <button class="cantidad-btn menos">-</button>
+                        <span class="cantidad">0</span>
+                        <button class="cantidad-btn mas">+</button>
+                    </div>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                </div>
+
+                <div class="producto-card">
+                    <img src="/Comida/takis.jfif" alt="Takis" class="producto-img">
+                    <h3 class="producto-nombre">Takis</h3>
+                    <p class="producto-desc">Takis 28gr</p>
+                    <p class="producto-precio">$0.90</p>
+                    <div class="producto-controles">
+                        <button class="cantidad-btn menos">-</button>
+                        <span class="cantidad">0</span>
+                        <button class="cantidad-btn mas">+</button>
+                    </div>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                </div>
+
+                <div class="producto-card">
+                    <img src="/Comida/chestre.jfif" alt="Chestre" class="producto-img">
+                    <h3 class="producto-nombre">CheeseTris</h3>
+                    <p class="producto-desc">CheeseTris 150gr</p>
+                    <p class="producto-precio">$3.00</p>
+                    <div class="producto-controles">
+                        <button class="cantidad-btn menos">-</button>
+                        <span class="cantidad">0</span>
+                        <button class="cantidad-btn mas">+</button>
+                    </div>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Carrito flotante -->
+        <div class="floating-cart" id="floatingCart">
+            <img src="/Iconos/carrito.svg" alt="Carrito" class="cart-icon">
+            <span class="cart-count">0</span>
+        </div>
+    </main>
+    <div class="login-modal" id="loginModal">
+        <div class="login-container">
+            <button class="close-login" id="closeLogin">&times;</button>
+            <h2 class="login-title">INICIAR SESIÓN</h2>
+            
+            <form class="login-form" id="loginForm">
+                <div class="input-group">
+                    <label for="login-email">Correo Electrónico</label>
+                    <input type="email" id="login-email" name="email">
+                    <img src="/Iconos/email.svg" alt="Email" class="input-icon">
+                    <div class="error-message" id="email-error"></div>
+                </div>
+                
+                <div class="input-group">
+                    <label for="login-password">Contraseña</label>
+                    <input type="password" id="login-password" name="password">
+                    <img src="/Iconos/password.svg" alt="Contraseña" class="input-icon">
+                    <div class="error-message" id="password-error"></div>
+                </div>
+                
+                <div class="login-options">
+                    <label class="remember-me">
+                        <input type="checkbox" name="remember">
+                        <span>Recordar mi cuenta</span>
+                    </label>
+                    <a href="/Olvidocontrasena/OlvidoPsw.html" class="forgot-password">¿Olvidaste tu contraseña?</a>
+                </div>
+                
+                <button type="submit" class="login-button">INICIAR SESIÓN</button>
+                
+                <div class="register-link">
+                    <span>¿No tienes una cuenta?</span>
+                    <a href="/Registro/Registro.html" id="goToRegister">Regístrate aquí</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <!-- Columna de enlaces -->
+            <div class="footer-section links">
+                <h3 class="footer-title">NAVEGACIÓN</h3>
+                <ul class="footer-menu">
+                    <li>
+                        <a href="/Pagina Principal/PgPrincipal.html">
+                            <img src="/Iconos/Inicio.svg" alt="Inicio" class="footer-icon">
+                            <span>Inicio</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Pagina Cartelera/PgCartelera.html">
+                            <img src="/Iconos/Cartelera.svg" alt="Cartelera" class="footer-icon">
+                            <span>Cartelera</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Pagina Estrenos/PgEstrenos.html">
+                            <img src="/Iconos/Estrenos.svg" alt="Próximos Estrenos" class="footer-icon">
+                            <span>Próximos Estrenos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Carameleria/Carameleria.html">
+                            <img src="/Iconos/Carameleria.svg" alt="Carameleria" class="footer-icon">
+                            <span>Carameleria</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Columna del logo y redes -->
+            <div class="footer-section brand">
+                <div class="footer-logo-container">
+                    <img src="/logo completo.png" alt="Vaky'sCinema Logo" class="footer-logo">
+                </div>
+                <div class="social-media">
+                    <a href="#" aria-label="Facebook"><img src="/Iconos/facebook-svgrepo-com.svg" alt="Facebook"></a>
+                    <a href="#" aria-label="Instagram"><img src="/Iconos/instagram-svgrepo-com.svg" alt="Instagram"></a>
+                    <a href="#" aria-label="TikTok"><img src="/Iconos/tiktok-svgrepo-com.svg" alt="TikTok"></a>
+                </div>
+            </div>
+            
+            <!-- Columna de contacto -->
+            <div class="footer-section contact">
+                <h3 class="footer-title">CONTÁCTANOS</h3>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <img src="/Iconos/Ubicacion.svg" alt="Ubicación" class="contact-icon">
+                        <span>Centro comercial Unicentro, Edo. Aragua</span>
+                    </div>
+                    <div class="contact-item">
+                        <img src="/Iconos/telefono.svg" alt="Teléfono" class="contact-icon">
+                        <span>0412-1435678</span>
+                    </div>
+                    <div class="contact-item">
+                        <img src="/Iconos/email.svg" alt="Email" class="contact-icon">
+                        <span>Vaky'sCinema@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Línea divisoria -->
+        <div class="footer-divider"></div>
+        
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p class="copyright">© 2023 Vaky'sCinema. Todos los derechos reservados</p>
+            <p class="credits">Powered by: <span>Marienmi Rovallo</span></p>
+        </div>
+    </footer>
+    <!-- Modal del Carrito -->
+<div class="cart-modal" id="cartModal">
+    <div class="cart-modal-content">
+        <button class="close-cart">&times;</button>
+        <h2><i class="fas fa-shopping-cart"></i> Tu Carrito</h2>
+        
+        <div class="cart-items" id="cartItems">
+            <!-- Los productos se añadirán aquí dinámicamente -->
+        </div>
+        
+        <div class="cart-total">
+            <span>Total:</span>
+            <span id="cartTotal">$0.00</span>
+        </div>
+        
+        <button class="btn-comprar" id="checkoutBtn">
+            <i class="fas fa-credit-card"></i> Comprar Productos
+        </button>
+    </div>
+</div>
+    <script src="Carameleria.js"></script>
+</body>
+</html>

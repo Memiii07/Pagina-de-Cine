@@ -1,0 +1,21 @@
+@font-face {
+    font-family:"Bebas Neue";
+    src: url(Fuentes/Bebas_Neue/BebasNeue-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family:"Lato";
+    src: url(Fuentes/Lato/Lato-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family:"Montserrat";
+    src: url(Fuentes/Montserrat/static/Montserrat-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family:"Playfair Display";
+    src: url(Fuentes/Playfair_Display/static/PlayfairDisplay-Regular.ttf) format("truetype");
+}
+
+
