@@ -46,7 +46,7 @@ PaginaWeb/
 
 ## 👩‍💻 Autor
 
-**Marienni Rovallo**  
+**Marienmi Rovallo**  
 Estudiante de Ingeniería de Sistemas — UNEFA  
 [GitHub](https://github.com/Memiii07)
 
