@@ -2,11 +2,6 @@
 
 Sitio web de cine desarrollado con HTML, CSS y JavaScript. Incluye múltiples secciones: cartelera, próximos estrenos, tráilers, caramelería, comida, horarios, registro de usuario y recuperación de contraseña.
 
-## 🚀 Demo
-
-Puedes ver el proyecto en vivo aquí:  
-👉 [Ver demo](https://memiii07.github.io/Pagina-de-Cine/)
-
 ## 🛠️ Tecnologías utilizadas
 
 - HTML5
